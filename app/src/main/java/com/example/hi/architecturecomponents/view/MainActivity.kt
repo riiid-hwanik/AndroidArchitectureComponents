@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import com.example.hi.architecturecomponents.R.layout
 import com.example.hi.architecturecomponents.model.UserViewModel
-import io.reactivex.disposables.CompositeDisposable
 import kotlinx.android.synthetic.main.activity_main.btnDown
 import kotlinx.android.synthetic.main.activity_main.btnUp
 import kotlinx.android.synthetic.main.activity_main.tvCount
@@ -15,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_main.tvCount
 class MainActivity : LifecycleActivity() {
 
     private val TAG = this::class.java.simpleName
-    private val disposable = CompositeDisposable()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
