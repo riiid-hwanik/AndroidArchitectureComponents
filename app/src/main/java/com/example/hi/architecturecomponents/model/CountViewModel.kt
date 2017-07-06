@@ -1,32 +1,28 @@
 package com.example.hi.architecturecomponents.model
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.util.Log
+import io.reactivex.subjects.BehaviorSubject
 
 /**
  * Created by hi on 2017. 7. 6..
  */
 
-class UserViewModel : ViewModel() {
-
+class UserViewModel constructor(private var number: Int = 0) : ViewModel() {
     private val TAG: String = this::class.java.simpleName
-    private var number = 0
-    private var count: MutableLiveData<Int> = MutableLiveData()
+    private var sj = BehaviorSubject.create<Int>()
 
-    fun getCount(): LiveData<Int> {
-        return count
+    fun getCount(): BehaviorSubject<Int> {
+        return sj
     }
 
     fun increase() {
-        count.value = ++number
+        sj.onNext(++number)
     }
 
     fun decrease() {
-        count.value = --number
+        sj.onNext(--number)
     }
-
 
     /**
      * ViewModel이 더이상 사용되지 않고 파괴딜 때 호출

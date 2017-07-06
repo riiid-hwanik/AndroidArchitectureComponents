@@ -4,32 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.hi.architecturecomponents.view.MainActivity"
     android:gravity="center"
+    tools:context="com.example.hi.architecturecomponents.view.MainActivity"
     >
 
-    <Button
-        android:id="@+id/btnUp"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="up"
-        />
-
-    <TextView
-        android:id="@+id/tvCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginEnd="32dp"
         android:gravity="center"
-        android:text="0"
-        />
+        android:orientation="vertical"
+        >
 
-    <Button
-        android:id="@+id/btnDown"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Data"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="up"
+            />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="0"
+            />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="down"
+            />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="down"
-        />
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ViewModel Data"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/btnUp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="up"
+            />
+
+        <TextView
+            android:id="@+id/tvCount1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="0"
+            />
+
+        <Button
+            android:id="@+id/btnDown1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="down"
+            />
+    </LinearLayout>
 
 </LinearLayout>
